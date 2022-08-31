@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:probador_zapatillas/pages/adidas_page.dart';
 import 'package:probador_zapatillas/pages/catalogo_page.dart';
 import 'package:probador_zapatillas/pages/login_page.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       //home: MyHomePage(),
       initialRoute: "/",
       routes: {
+        //"/": (BuildContext context) => AdidasPage(),    para poder ver la pantalla de las zapatillas
         "/": (BuildContext context) => const LoginPage(),
         "/catalogo": (BuildContext context) => CatalogoPage()
       },

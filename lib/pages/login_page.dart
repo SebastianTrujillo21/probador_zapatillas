@@ -142,7 +142,7 @@ class _LoginPageState extends State<LoginPage> {
                         label: const Text(
                           "LOGIN WITH GOOGLE",
                           textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.grey),
+                          style: TextStyle(color: Colors.black),
                         ),
                         icon: Image.asset(
                           "assets/images/google-logo.png",

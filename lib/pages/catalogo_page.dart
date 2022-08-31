@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:probador_zapatillas/pages/adidas_page.dart';
 
 void main() => runApp(CatalogoPage());
 
 // ignore: must_be_immutable
 class CatalogoPage extends StatelessWidget {
   CatalogoPage({super.key});
+  final formKey = GlobalKey<FormState>();
   List<String> names = ["Adidas", "Nike", "Puma", "Reebok", "New Athletic"];
   List<String> logos = [
     "assets/images/adidas-logo.png",
@@ -46,8 +48,7 @@ class CatalogoPage extends StatelessWidget {
                       width: 50,
                     ),
                     onTap: () {
-                      // ignore: avoid_print
-                      print(name);
+                      Navigator.of(context).pushNamed("/$name");
                     },
                   );
                 }),
@@ -71,6 +72,11 @@ Widget _getDrawe(BuildContext context, String name) {
           currentAccountPicture: const Icon(Icons.person),
         ),
         ListTile(
+          title: const Text("Favourites"),
+          leading: const Icon(Icons.favorite),
+          onTap: () => {},
+        ),
+        ListTile(
           title: const Text("Log Out"),
           leading: const Icon(Icons.exit_to_app),
           onTap: () {
@@ -80,6 +86,10 @@ Widget _getDrawe(BuildContext context, String name) {
       ],
     ),
   );
+}
+
+void _namePage(BuildContext context) {
+  return;
 }
 
 class CatalogoPageArgument {
